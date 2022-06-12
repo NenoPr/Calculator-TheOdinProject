@@ -105,8 +105,8 @@ let undoBtn = document.getElementById("undo-btn")
 
 var decimalUsed = false;
 
-window.addEventListener("keydown", event => console.log(event))
-window.addEventListener("click", event => console.log(event.style))
+window.addEventListener("keydown", event => console.log(event.keyCode))
+window.addEventListener("click", event => console.log(event))
 
 window.addEventListener("keydown", keyboardPress)
 
@@ -132,6 +132,8 @@ window.addEventListener("keydown", keyboardPress)
 
 function keyboardPress(e) {
 
+    if (e.keyCode >= 96 && e.keyCode <= 111 || e.keyCode == 8 || e.keyCode == 13 || e.keyCode >= 45 && e.keyCode <= 57) {
+    } else return;
     if (e.key == "Enter") {
         calculationInfoFunc(displayCal,numbers);
         displayCal.innerText = "";
@@ -142,7 +144,7 @@ function keyboardPress(e) {
     } else if (e.key == ",") {
         displayCal.innerText += ".";
         numbers.push(".");
-    } 
+    }
     else {
         displayCal.innerText += e.key;
         numbers.push(e.key);
@@ -188,6 +190,7 @@ for (let i = 0;i<btnNum.length;i++){
             calculationInfoFunc(displayCal, numbers);
             numbers = [];
             displayCal.innerText = "";
+            decimalUsed = false;
 
         } 
 
