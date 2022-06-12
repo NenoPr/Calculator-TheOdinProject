@@ -1,26 +1,78 @@
 
 * {
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 body {
     display: flex;
-    flex-direction: column;
+    align-items: stretch;
     justify-content: center;
+    height: 95vh;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: lightgoldenrodyellow;
+}
+
+.cal-div {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 300px;
+    min-width: 100px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#calculator-id {
+    border: 10px solid grey;
+    border-radius: 10px;
 }
 
 #screen-output {
     display: flex;
     flex-direction: column;
-    height: 200px;
-    width: 700px;
     align-self: center;
     justify-content: center;
     align-items: flex-end;
     font-size: xx-large;
-    gap: 50px;
-    padding-right: 50px;
+    flex: 1;
+    min-width: 100%;
+    border: 5px solid whitesmoke;
+    border-radius: 5px;
+    background-color: lightblue;
+
+}
+
+#calculations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 50px;
+    font-weight: bolder;
+    flex: 1;
+    min-height: 60px;
+    padding-right: 10%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: xx-large;
+    font-weight: bolder;
+    padding-right: 10%;
+    flex: 1;
+    font-size: 70px;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 #calculator-btns {
@@ -28,37 +80,83 @@ body {
     align-content: stretch;
     width: 100%;
     height: 100%;
+    flex: 2;
+    min-width: 100%;
+    flex-wrap: wrap;
 }
+
+ /* ----------------------------------NUMBERS BUTTONS-------------------------------- */
 
 #numbers-btns {
     display: flex;
     flex-direction: column;
+    align-content: stretch;
+    flex: 3;
+    font-size: xx-large;
+    flex-wrap: wrap;
+}
+
+.btn-num {
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    min-height: 500px;
-    flex: 4;
+    font-size: xx-large;
+    flex: 1;
+    border: 5px solid black;
+    border-radius: 5px;
+    background-color: lightblue;
+    font-weight: bolder;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.btn-num:active {
+    background-color: rgb(99, 168, 191);
+}
+
+#decimal-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    flex: 1;
+    border: 5px solid black;
+    border-radius: 5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: lightcyan;
+    font-weight: bolder;
+}
+
+#decimal-btn:active {
+    background-color: rgb(187, 248, 248);
 }
 
 .numbers-row {
     display: flex;
-    width: 100%;
-    height: 100%;
+    flex-direction: row;
+    align-items: stretch;
+    flex: 1;
 }
 
-.numbers-row button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    font-size: xx-large;
+#equal-btn {
+    background-color: lightseagreen;
+    font-weight: bolder;
 }
+
+#equal-btn:active {
+    background-color: rgb(26, 147, 141);
+}
+
+ /* -------------------------------OPERATORS--------------------------------------- */
 
 #operators-btns {
     display: flex;
     align-content: stretch;
     flex-direction: column;
     flex: 1;
+    flex-wrap: wrap;
+    
 }
 
 #operators-btns button {
@@ -67,4 +165,45 @@ body {
     font-size: xx-large;
     align-items: center;
     flex: 1;
+    font-weight: bolder;
+    background-color: orange;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
+
+#operators-btns button:active {
+    background-color: rgb(255, 219, 154);
+}
+
+#operators-btns #undo-btn {
+    border: 5px solid black;
+    border-radius: 5px;
+    background-color: lightgrey;
+    font-weight: bolder;
+}
+
+#operators-btns #undo-btn:active {
+    background-color: rgb(133, 237, 255);
+}
+
+#operators-btns #clear-btn {
+    border: 5px solid black;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: bolder;
+}
+
+#operators-btns #clear-btn:active {
+    background-color: rgb(170, 170, 170);
+}
+
+
+/* ------------------------------------ MISC ---------------------------------------------- */
+
+
+
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+  }

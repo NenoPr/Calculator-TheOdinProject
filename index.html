@@ -9,8 +9,9 @@
     <title>Calculator</title>
 </head>
 <body>
+    <div class="cal-div"></div>
     
-    <div id="cal-div">
+    <div class="cal-div" id="calculator-id">
 
         <div id="screen-output">
             <div id="calculations">
@@ -39,9 +40,9 @@
                     <button class="btn-num">9</button>
                 </div>
                 <div id="numbers-4row" class="numbers-row">
-                    <button class="btn-num" id="clear-btn">Clear</button>
+                    <button id="decimal-btn">.</button>
                     <button class="btn-num">0</button>
-                    <button class="btn-num">=</button>
+                    <button class="btn-num" id="equal-btn">=</button>
                 </div>
             </div>
             <div id="operators-btns">
@@ -49,9 +50,14 @@
                 <button class="btn-num">-</button>
                 <button class="btn-num">*</button>
                 <button class="btn-num">/</button>
+                <button  id="undo-btn">Undo</button>
+                <button class="btn-num" id="clear-btn">Clear</button>
             </div>
         </div>
 
     </div>
+
+    <div class="cal-div"></div>
+
 </body>
 </html>
